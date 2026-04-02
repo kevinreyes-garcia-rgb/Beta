@@ -3,26 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Página en GitHub Pages</title>
+  <title>Mi Página Web</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 0;
-      background: #0f0f0f;
-      color: white;
       font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #0f0f0f 0%, #181818 100%);
+      color: #ffffff;
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     header {
       width: 100%;
+      padding: 22px 16px;
       background: #202020;
-      padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
     }
 
     header h1 {
@@ -33,8 +35,16 @@
     .container {
       width: 90%;
       max-width: 1000px;
-      margin-top: 30px;
+      margin: 30px auto 0;
       text-align: center;
+    }
+
+    .card {
+      background: #1f1f1f;
+      border: 1px solid #333;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     }
 
     .video-container {
@@ -44,7 +54,6 @@
       border-radius: 12px;
       overflow: hidden;
       border: 2px solid #333;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
     }
 
     iframe {
@@ -55,15 +64,15 @@
     }
 
     .info {
-      margin-top: 20px;
-      color: #aaa;
-      font-size: 0.95rem;
+      margin-top: 18px;
+      color: #b5b5b5;
+      font-size: 0.96rem;
       line-height: 1.6;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 15px;
+      margin-top: 14px;
       padding: 12px 18px;
       background: #ff0000;
       color: white;
@@ -76,8 +85,24 @@
       background: #cc0000;
     }
 
-    .small {
+    .secondary {
+      display: inline-block;
       margin-top: 10px;
+      padding: 12px 18px;
+      background: #2c2c2c;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      border: 1px solid #444;
+    }
+
+    .secondary:hover {
+      background: #3a3a3a;
+    }
+
+    .small {
+      margin-top: 12px;
       font-size: 0.85rem;
       color: #777;
     }
@@ -85,27 +110,39 @@
 </head>
 <body>
   <header>
-    <h1>Mi Página con YouTube</h1>
+    <h1>Mi Página Web con YouTube</h1>
   </header>
 
   <main class="container">
-    <div class="video-container">
-      <iframe
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen>
-      </iframe>
-    </div>
+    <section class="card">
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
 
-    <div class="info">
-      <p>Este video se reproduce dentro de tu página de GitHub Pages.</p>
-      <p>El botón abre YouTube completo en otra pestaña.</p>
+      <div class="info">
+        <p>Este video se muestra dentro de tu sitio de GitHub Pages.</p>
+        <p>El botón rojo abre YouTube en otra pestaña.</p>
+      </div>
+
       <a class="btn" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-        Abrir YouTube completo
+        Abrir YouTube
       </a>
-      <div class="small">Cambia el ID del video por el que tú quieras.</div>
-    </div>
+
+      <br />
+
+      <a class="secondary" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+        Abrir este video
+      </a>
+
+      <div class="small">
+        Cambia el ID del video por el que tú quieras.
+      </div>
+    </section>
   </main>
 </body>
 </html>
